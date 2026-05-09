@@ -12,7 +12,7 @@ echo Current Version: %version%
 echo Update Version : %update_version%
 echo.
 
-if %version%==%update_version% set code=1 && exit /b
+if "%version%"=="%update_version%" set code=1 && exit /b
 
 
 echo Update required.
