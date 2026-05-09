@@ -72,11 +72,11 @@ set code=0
 exit /b
 
 :downloadall
+if exist temp_files rmdir /S /Q temp_files
+mkdir temp_files
+
 echo Downloading 1.10.0 files, this may take a second.
-cd
-echo Changing to proper directory
-cd /d "%~dp0.."
-echo Directory changed to %cd%
+
 ping localhost -n 5 >nul
 curl -L -o temp_files\EhealthCheck.bat ^
 https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/1.10.0/bin/battle/EhealthCheck.bat?nocache=%random%
