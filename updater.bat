@@ -72,7 +72,7 @@ move /Y temp_files\BioFuse.bat BioFuse.bat
 :: =========================================================
 :: CLEANUP
 :: =========================================================
-
-rmdir /S /Q temp_files
 set code=0
 exit /b
+
+
