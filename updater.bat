@@ -202,10 +202,10 @@ curl -L -o temp_files\shopKeep.bat ^
 https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/1.10.0/bin/item/shopKeep.bat?nocache=%random%
 echo Patching shopKeep.bat...
 move /Y temp_files\shopKeep.bat bin\item\shopKeep.bat
-pause
+ping localhost -n 2 >nul
 echo All files downloaded and patched successfully...
-set code=0
-set version=%update_version%
-set vmsg=Game was updated!!!
-set vmsg2=This message is here to tell you it worked. How cool! This is BATCH!
-exit /b
+echo Due to how large the 1.10.0 update is, the updater will close
+echo and will relaunch the game. Good luck!
+pause 
+start BioFuse.bat
+exit
