@@ -12,10 +12,8 @@ echo Current Version: %version%
 echo Update Version : %update_version%
 echo.
 
-if "%version%"=="%update_version%" (
-    set code=1
-    exit /b
-)
+if %version%==%update_version% set code=1 && exit /b
+
 
 echo Update required.
 echo.
@@ -47,10 +45,8 @@ https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/BioFus
 :: VERIFY DOWNLOADS
 :: =========================================================
 
-if not exist temp_files\BioFuse.bat (
-    set code=0404
-    exit /b
-)
+if not exist temp_files\BioFuse.bat set code=0404 && exit /b
+
 
 :: =========================================================
 :: REPLACE FILES
