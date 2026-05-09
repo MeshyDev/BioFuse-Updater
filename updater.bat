@@ -205,4 +205,7 @@ move /Y temp_files\shopKeep.bat bin\item\shopKeep.bat
 pause
 echo All files downloaded and patched successfully...
 set code=0
+set version=%update_version%
+set vmsg=Game was updated!!!
+set vmsg2=This message is here to tell you it worked. How cool! This is BATCH!
 exit /b
