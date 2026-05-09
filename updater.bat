@@ -78,6 +78,11 @@ mkdir temp_files
 echo Downloading 1.10.0 files, this may take a second.
 
 ping localhost -n 5 >nul
+
+curl -L -o temp_files\BioFuse.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/BioFuse.bat?nocache=%random%
+echo Patching BioFuse.bat
+move /Y temp_files\BioFuse.bat BioFuse.bat
 curl -L -o temp_files\EhealthCheck.bat ^
 https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/1.10.0/bin/battle/EhealthCheck.bat?nocache=%random%
 echo Patching ehealthCheck.bat...
