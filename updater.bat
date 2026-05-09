@@ -13,7 +13,7 @@ echo Update Version : %update_version%
 echo.
 
 if "%version%"=="%update_version%" set code=1 && exit /b
-
+if "%version%"=="1.9.1" goto downloadall
 
 echo Update required.
 echo.
@@ -71,4 +71,129 @@ move /Y temp_files\BioFuse.bat BioFuse.bat
 set code=0
 exit /b
 
+:downloadall
+echo Downloading 1.10.0 files, this may take a second.
+ping localhost -n 5 >nul
+curl -L -o temp_files\EhealthCheck.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/EhealthCheck.bat
+echo Patching ehealthCheck.bat...
+move /Y temp_files\EhealthCheck.bat bin\battle\EhealthCheck.bat
 
+curl -L -o temp_files\checkVar.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/checkVar.bat
+echo Patching checkVar.bat...
+move /Y temp_files\checkVar.bat bin\battle\checkVar.bat
+
+curl -L -o temp_files\drawBattle.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/drawBattle.bat
+echo Patching drawBattle.bat...
+move /Y temp_files\drawBattle.bat bin\battle\drawBattle.bat
+
+curl -L -o temp_files\getATK.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getATK.bat
+echo Patching getATK.bat...
+move /Y temp_files\getATK.bat bin\battle\getATK.bat
+
+curl -L -o temp_files\getBlock.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getBlock.bat
+echo Patching getBlock.bat...
+move /Y temp_files\getBlock.bat bin\battle\getBlock.bat
+
+curl -L -o temp_files\getCrit.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getCrit.bat
+echo Patching getCrit.bat...
+move /Y temp_files\getCrit.bat bin\battle\getCrit.bat
+
+curl -L -o temp_files\getCritDMG.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getCritDMG.bat
+echo Patching getCritDMG.bat...
+move /Y temp_files\getCritDMG.bat bin\battle\getCritDMG.bat
+
+curl -L -o temp_files\getEATK.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getEATK.bat
+echo Patching getEATK.bat...
+move /Y temp_files\getEATK.bat bin\battle\getEATK.bat
+
+curl -L -o temp_files\getEmgk.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getEmgk.bat
+echo Patching getEmgk.bat...
+move /Y temp_files\getEmgk.bat bin\battle\getEmgk.bat
+
+curl -L -o temp_files\getFire.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getFire.bat
+echo Patching getFire.bat...
+move /Y temp_files\getFire.bat bin\battle\getFire.bat
+
+curl -L -o temp_files\getHPdrain.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getHPdrain.bat
+echo Patching getHPdrain.bat...
+move /Y temp_files\getHPdrain.bat bin\battle\getHPdrain.bat
+
+curl -L -o temp_files\getScaling.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/getScaling.bat
+echo Patching getScaling.bat...
+move /Y temp_files\getScaling.bat bin\battle\getScaling.bat
+
+curl -L -o temp_files\healthCheck.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/healthCheck.bat
+echo Patching healthCheck.bat...
+move /Y temp_files\healthCheck.bat bin\battle\healthCheck.bat
+
+curl -L -o temp_files\healthRandom.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/healthRandom.bat
+echo Patching healthRandom.bat...
+move /Y temp_files\healthRandom.bat bin\battle\healthRandom.bat
+
+curl -L -o temp_files\deepforest.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/deepforest.bat
+echo Patching deepforest.bat...
+move /Y temp_files\deepforest.bat bin\battle\b_var\deepforest.bat
+
+curl -L -o temp_files\flatlands.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/flatlands.bat
+echo Patching flatlands.bat...
+move /Y temp_files\flatlands.bat bin\battle\b_var\flatlands.bat
+
+curl -L -o temp_files\forest.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/forest.bat
+echo Patching forest.bat...
+move /Y temp_files\forest.bat bin\battle\b_var\forest.bat
+
+curl -L -o temp_files\junkyard.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/junkyard.bat
+echo Patching junkyard.bat...
+move /Y temp_files\junkyard.bat bin\battle\b_var\junkyard.bat
+
+curl -L -o temp_files\outside.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/outside.bat
+echo Patching outside.bat...
+move /Y temp_files\outside.bat bin\battle\b_var\outside.bat
+
+curl -L -o temp_files\president.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/president.bat
+echo Patching president.bat...
+move /Y temp_files\president.bat bin\battle\b_var\president.bat
+
+curl -L -o temp_files\trainyard.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/battle/b_var/trainyard.bat
+echo Patching trainyard.bat...
+move /Y temp_files\trainyard.bat bin\battle\b_var\trainyard.bat
+
+curl -L -o temp_files\checkArray.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/item/checkArray.bat
+echo Patching checkArray.bat...
+move /Y temp_files\checkArray.bat bin\item\checkArray.bat
+
+curl -L -o temp_files\equipMsg.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/item/equipMsg.bat
+echo Patching equipMsg.bat...
+move /Y temp_files\equipMsg.bat bin\item\equipMsg.bat
+
+curl -L -o temp_files\shopKeep.bat ^
+https://raw.githubusercontent.com/MeshyDev/BioFuse_Repo/refs/heads/1.10.0/bin/item/shopKeep.bat
+echo Patching shopKeep.bat...
+move /Y temp_files\shopKeep.bat bin\item\shopKeep.bat
+
+echo All files downloaded and patched successfully...
+set code=0
+exit /b
