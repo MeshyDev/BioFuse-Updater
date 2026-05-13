@@ -2,8 +2,9 @@
 :: UPDATE VERSION
 :: =========================================================
 
-set update_version=1.10.0_5926
-:: Updater version 1.0
+set update_version=1.10.0_51326
+:: Updater version 1.1
+:: Adds file check, which will download the missing files if it doesn't exist.
 :: =========================================================
 :: VERSION CHECK
 :: =========================================================
@@ -17,6 +18,8 @@ if "%version%"=="1.9.1" goto downloadall
 
 echo Update required.
 echo.
+echo 1.10.0_51326 changes some vocabulary and fixes some bugs.
+echo.
 ping localhost -n 3 >nul
 :: =========================================================
 :: CREATE TEMP DOWNLOAD AREA
@@ -28,6 +31,7 @@ mkdir temp_files
 :: =========================================================
 :: DOWNLOAD UPDATED FILES
 :: =========================================================
+
 
 echo Downloading updated files...
 
